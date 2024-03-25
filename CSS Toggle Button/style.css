@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    
+    appearance: none;
+    padding: 10px 25px;
+    background-color: #532cbe;
+}
+input::before{
+    content: "Open";
+}
+input:checked::before{
+    content: "Close";
+}
