@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: monospace;
+    background: linear-gradient(#141e30, #243b55);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    padding: 50px;
+    line-height: 1.5;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 15px 25px #00000099;
+    color: #ffffff;
+    background-color: #00000080;
+    border-radius: 10px;
+    padding-bottom: 60px;
+}
+.container #head{
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 30px;
+    text-shadow: 0px 0px 15px #cbe4fa;
+}
+.container form label{
+    color: #ffffff;
+    font-size: 16px;
+}
+.container input[type=text], input[type=email], input[type=password]{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    color: #ffffff;
+    margin-top: -20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    font-family: monospace;
+}
+.container input[type=submit]{
+    width: 8rem;
+    height: 3rem;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: monospace;
+    position: absolute;
+    letter-spacing: 5px;
+    transition: 400ms;
+}
+.container a{
+    position: absolute;
+    top: 90%;
+    left: 55%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.container input[type=submit]:hover{
+    background-color: #f0f8ff;
+    transition: 400ms;
+    color: #000000;
+    box-shadow: 0px 0px 50px #f8f0ff;
+}
