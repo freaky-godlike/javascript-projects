@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #202020;
+}
+.tabs input{
+    visibility: hidden;
+    opacity: 0;
+}
+.tabs .buttons{
+    position: relative;
+    display: flex;
+    padding: 30px 40px;
+    gap: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: #000000;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.tabs .buttons label{
+    width: 20%;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px #ffffff;
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tabs .buttons label:hover{
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #ffffff);
+}
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.tabs input:nth-child(4):checked ~ .buttons label:nth-child(4),
+.tabs input:nth-child(5):checked ~ .buttons label:nth-child(5){
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #ffffff);
+}
+.tabs .buttons .indicator{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 5px;
+    transition: 0.5s;
+}
+.tabs .buttons .indicator::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #ffffff) drop-shadow(0 0 30px #ffffff) drop-shadow(0 0 50px #ffffff);
+}
+.tabs .buttons .indicator::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #ffffff) drop-shadow(0 0 30px #ffffff) drop-shadow(0 0 50px #ffffff) blur(5px);
+}
+.tabs input:nth-child(1):checked ~ .buttons .indicator{
+    left: 0;
+}
+.tabs input:nth-child(2):checked ~ .buttons .indicator{
+    left: 20%;
+}
+.tabs input:nth-child(3):checked ~ .buttons .indicator{
+    left: 40%;
+}
+.tabs input:nth-child(4):checked ~ .buttons .indicator{
+    left: 60%;
+}
+.tabs input:nth-child(5):checked ~ .buttons .indicator{
+    left: 80%;
+}
